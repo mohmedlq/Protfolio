@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- التدرج اللوني لحرف الـ M (Amber) -->
+    <linearGradient id="amberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    
+    <!-- تأثير التوهج الخفيف (Glow) -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- الخلفية الداكنة المتناسقة مع الموقع -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#0D1117" stroke="#30363d" stroke-width="2" />
+
+  <!-- رسم حرف M -->
+  <path
+    d="M 28 70 L 28 35 L 50 55 L 72 35 L 72 70"
+    fill="none"
+    stroke="url(#amberGradient)"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+</svg>
